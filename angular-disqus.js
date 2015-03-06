@@ -32,6 +32,13 @@
     function getShortname() {
       return shortname || window.disqus_shortname;
     }
+    
+    /**
+     * @param {String} name disqus shortname
+     */
+     function setShortname(name) {
+       shortname = name;
+     }
 
     /**
      * @param {String} shortname disqus shortname
