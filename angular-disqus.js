@@ -1,7 +1,7 @@
-/* 
+/*
  * angular-disqus 1.1.0
  * http://github.com/kirstein/angular-disqus
- * 
+ *
  * Licensed under the MIT license
  */
 (function (angular, window) {
@@ -32,7 +32,7 @@
     function getShortname() {
       return shortname || window.disqus_shortname;
     }
-    
+
     /**
      * @param {String} name disqus shortname
      */
