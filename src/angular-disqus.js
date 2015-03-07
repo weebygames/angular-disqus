@@ -28,6 +28,13 @@
     }
 
     /**
+     * @param {String} name disqus shortname
+     */
+     function setShortname(name) {
+       shortname = name;
+     }
+
+    /**
      * @param {String} shortname disqus shortname
      * @param {String} file file name to add.
      * @return {String} disqus embed src with embedded shortname
@@ -143,14 +150,6 @@
       container.appendChild(buildScriptTag(scriptSrc));
     }
 
-
-    /**
-     * @param {String} sname shortname
-     */
-    this.setShortname = function(sname) {
-      shortname = sname;
-    };
-
     // Provider constructor
     this.$get = [ '$location', function($location) {
 
@@ -195,7 +194,8 @@
       return {
         commit       : commit,
         getShortname : getShortname,
-        loadCount    : loadCount
+        loadCount    : loadCount,
+        setShortname : setShortname
       };
     }];
   });
