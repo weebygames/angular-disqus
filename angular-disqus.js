@@ -1,7 +1,7 @@
-/*
+/* 
  * angular-disqus 1.1.0
  * http://github.com/kirstein/angular-disqus
- *
+ * 
  * Licensed under the MIT license
  */
 (function (angular, window) {
@@ -156,14 +156,6 @@
       container.appendChild(buildScriptTag(scriptSrc));
     }
 
-
-    /**
-     * @param {String} sname shortname
-     */
-    this.setShortname = function(sname) {
-      shortname = sname;
-    };
-
     // Provider constructor
     this.$get = [ '$location', function($location) {
 
@@ -208,7 +200,8 @@
       return {
         commit       : commit,
         getShortname : getShortname,
-        loadCount    : loadCount
+        loadCount    : loadCount,
+        setShortname : setShortname
       };
     }];
   });
